@@ -1,0 +1,147 @@
+/* ========================================
+   FUNDO GERAL DA PÁGINA
+   ======================================== */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  /* gradiente escuro, tipo "estádio à noite" - combina com o clima FIFA */
+  background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: white;
+}
+
+header h1 {
+  text-align: center;
+  padding: 30px 0 10px;
+  font-size: 28px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+/* ========================================
+   SEÇÃO DO PROFESSOR
+   Centralizada, sozinha, card um pouco maior
+   ======================================== */
+.secao-professor {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 50px;
+}
+
+/* Card do professor um pouco maior que os dos alunos, pra reforçar destaque */
+.secao-professor .card-fifa {
+  transform: scale(1.15);
+}
+
+/* ========================================
+   GRID DOS ALUNOS
+   grid-template-columns define quantas colunas por fila.
+   Trocando "repeat(4, ...)" pra outro número muda quantos cards por fila.
+   ======================================== */
+.galeria-alunos {
+  display: grid;
+  grid-template-columns: repeat(4, 240px); /* 4 cards por fila, cada um com 240px */
+  gap: 30px;                                /* espaço entre os cards */
+  justify-content: center;                  /* centraliza o grid inteiro na página */
+  padding: 0 20px 60px;
+}
+
+/* ========================================
+   MOLDE BASE DO CARD (estilo FIFA)
+   Isso é COMPARTILHADO por todo mundo - NÃO EDITAR daqui pra baixo
+   até a linha "FIM DO MOLDE COMPARTILHADO"
+   ======================================== */
+.card-fifa {
+  width: 240px;
+  padding: 15px;
+  border-radius: 16px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.45); /* sombra mais forte, dá profundidade */
+  font-family: 'Arial Narrow', sans-serif;
+  transition: transform 0.2s ease;          /* suaviza o efeito de hover abaixo */
+}
+
+/* Efeito sutil: card "levanta" um pouco ao passar o mouse - detalhe de polish */
+.card-fifa:hover {
+  transform: translateY(-6px);
+}
+
+.card-topo {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+.card-rating {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.card-posicao {
+  font-size: 14px;
+  font-weight: bold;
+  align-self: flex-end;
+}
+
+.card-foto {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 10px auto;
+  border: 3px solid rgba(255,255,255,0.6);
+  display: block;
+}
+
+.card-nome {
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin: 5px 0 0;
+}
+
+.card-subtitulo {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.card-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: bold;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  padding-top: 8px;
+}
+
+.stat {
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+}
+/* ========================================
+   FIM DO MOLDE COMPARTILHADO
+   ======================================== */
+
+
+/* ========================================
+   CLASSES INDIVIDUAIS (cor de cada pessoa)
+   Cada aluno cria a SUA aqui embaixo, com nome único.
+   Só isso muda de pessoa pra pessoa.
+   ======================================== */
+.card-mateus {
+  background: linear-gradient(160deg, #2c3e50, #1a252f);
+  color: gold;
+}
+
+/* Exemplo do que um aluno vai adicionar:
+.card-joao23 {
+  background: linear-gradient(160deg, #7b2ff7, #4a00e0);
+  color: #f5f5f5;
+}
+*/
