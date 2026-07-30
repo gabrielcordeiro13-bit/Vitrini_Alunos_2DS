@@ -139,6 +139,11 @@ header h1 {
   color: gold;
 }
 
+.card-gabriel {
+  background: linear-gradient(160deg, #ff0000, #000000);
+  color: rgb(255, 225, 52);
+}
+
 /* Exemplo do que um aluno vai adicionar:
 .card-joao23 {
   background: linear-gradient(160deg, #7b2ff7, #4a00e0);
